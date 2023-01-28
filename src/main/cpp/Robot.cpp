@@ -6,7 +6,7 @@
 #include <fmt/core.h>
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <frc2/command/CommandScheduler.h>
-
+#include <frc/SerialPort.h>
 
 
 
@@ -78,13 +78,16 @@ bl.Set(spd * (-left_y));
 fr.Set(spd * (right_y));
 br.Set(spd * (right_y));
 
-
-
-
+AButton = xbox.GetAButton();
+BButton = xbox.GetBButton();
+XButton = xbox.GetXButton();
+YButton = xbox.GetYButton();
 
 
 
 }
+
+
 
 /**
  * This function is called periodically during test mode.
